@@ -1,0 +1,13 @@
+{
+  "$schema": "https://wails.io/schemas/config.v2.json",
+  "name": "WailsProxy",
+  "outputfilename": "WailsProxy",
+  "frontend:install": "npm install --offline --no-audit --no-fund",
+  "frontend:build": "npm run build",
+  "frontend:dev:watcher": "npm run dev",
+  "frontend:dev:serverUrl": "auto",
+  "author": {
+    "name": "WailsProxy Team",
+    "email": "dev@wailsproxy.local"
+  }
+}

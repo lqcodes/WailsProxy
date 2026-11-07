@@ -1,0 +1,22 @@
+# Binaries and build output
+build/bin/
+bin/sing-box
+bin/sing-box.exe
+bin/xray
+bin/xray.exe
+bin/*.dat
+bin/*.zip
+bin/*.tar.gz
+*.tmp
+
+# Runtime user data & configs (never commit personal nodes/subscriptions)
+data/*.json
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# OS & IDE
+.DS_Store
+.idea/
+.vscode/

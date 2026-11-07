@@ -1,0 +1,208 @@
+:root {
+  --primary-color: #1677ff;
+  --bg-color: #0f172a;
+  --card-bg: #1e293b;
+  --modal-bg: #1e293b;
+  --header-bg: #0b1120;
+  --text-color: #f8fafc;
+  --muted-color: #94a3b8;
+  --border-color: #334155;
+  --code-bg: rgba(15, 23, 42, 0.65);
+}
+
+:root[data-theme='light'] {
+  --bg-color: #f5f7fa;
+  --card-bg: #ffffff;
+  --modal-bg: #ffffff;
+  --header-bg: #f8fafc;
+  --text-color: #0f172a;
+  --muted-color: #64748b;
+  --border-color: #e2e8f0;
+  --code-bg: rgba(241, 245, 249, 0.9);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-width: 1020px;
+  height: 100%;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: transparent !important;
+  color: var(--text-color);
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.ant-table-thead > tr > th {
+  white-space: nowrap !important;
+}
+
+/* 全局弹窗、抽屉、Toast 消息、气泡确认框、下拉菜单主题自适应 */
+.ant-modal .ant-modal-content {
+  background-color: var(--modal-bg) !important;
+  color: var(--text-color) !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.35) !important;
+  border-radius: 14px !important;
+}
+
+.ant-modal .ant-modal-header {
+  background-color: transparent !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  padding-bottom: 12px !important;
+  margin-bottom: 14px !important;
+}
+
+.ant-modal .ant-modal-title {
+  color: var(--text-color) !important;
+}
+
+.ant-modal .ant-modal-close {
+  color: var(--muted-color) !important;
+}
+
+.ant-modal .ant-modal-close:hover {
+  color: var(--text-color) !important;
+  background-color: rgba(148, 163, 184, 0.15) !important;
+}
+
+.ant-modal .ant-modal-footer {
+  border-top: 1px solid var(--border-color) !important;
+  padding-top: 12px !important;
+  margin-top: 16px !important;
+}
+
+.ant-drawer .ant-drawer-content {
+  background-color: var(--modal-bg) !important;
+  color: var(--text-color) !important;
+}
+
+.ant-drawer .ant-drawer-header {
+  background-color: var(--header-bg) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+}
+
+.ant-drawer .ant-drawer-title,
+.ant-drawer .ant-drawer-close {
+  color: var(--text-color) !important;
+}
+
+.ant-message .ant-message-notice-content {
+  background-color: var(--modal-bg) !important;
+  color: var(--text-color) !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28) !important;
+  border-radius: 10px !important;
+}
+
+.ant-popover .ant-popover-inner,
+.ant-popconfirm .ant-popover-inner {
+  background-color: var(--modal-bg) !important;
+  color: var(--text-color) !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28) !important;
+}
+
+.ant-popover .ant-popover-title,
+.ant-popover .ant-popconfirm-title,
+.ant-popover .ant-popconfirm-description {
+  color: var(--text-color) !important;
+}
+
+.ant-dropdown .ant-dropdown-menu,
+.ant-select-dropdown {
+  background-color: var(--modal-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28) !important;
+}
+
+/* 节点编辑弹窗表单与输入框高度/视觉优化 */
+.node-edit-form .ant-form-item {
+  margin-bottom: 14px !important;
+}
+
+.node-edit-form .ant-form-item-label > label {
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: var(--text-color) !important;
+  height: 24px !important;
+}
+
+.node-edit-form .ant-input,
+.node-edit-form .ant-input-affix-wrapper,
+.node-edit-form .ant-input-number,
+.node-edit-form .ant-select-single .ant-select-selector {
+  min-height: 38px !important;
+  border-radius: 8px !important;
+  font-size: 13.5px !important;
+}
+
+.node-edit-form .ant-input-affix-wrapper > input.ant-input {
+  min-height: auto !important;
+  height: 28px !important;
+}
+
+.node-edit-form .ant-input-number .ant-input-number-input {
+  height: 36px !important;
+  line-height: 36px !important;
+}
+
+.node-edit-form .ant-select-single .ant-select-selector {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.node-edit-section {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 14px 16px 4px;
+  margin-bottom: 14px;
+}
+
+.node-edit-section-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mac-traffic-lights:hover .mac-traffic-icon {
+  opacity: 1 !important;
+}
+
+@keyframes pulseRing {
+  0% {
+    box-shadow: 0 0 0 0 rgba(22, 119, 255, 0.45);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(22, 119, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(22, 119, 255, 0);
+  }
+}
+
+.connect-orb:hover {
+  transform: scale(1.04);
+}
+
+.connect-orb:active {
+  transform: scale(0.97);
+}
+
+.connected-pulse {
+  animation: pulseRing 2.2s infinite;
+}
